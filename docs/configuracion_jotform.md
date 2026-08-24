@@ -39,6 +39,109 @@
 - Firma cliente.
 - Firma técnico.
 
+## Configuración recomendada para maquinaria
+
+El campo **Tipo de equipo** no debe usar categorías genéricas de soporte TI como Celular, Tablet o Laptop.
+
+Debe configurarse con lógica industrial, separando primero la familia de maquinaria y luego el tipo específico de equipo.
+
+### Campo 1: Categoría de maquinaria
+
+Tipo de campo: lista desplegable.
+
+Opciones:
+
+- Aluminio y PVC
+- Madera y Tableros
+
+Campo obligatorio: sí.
+
+### Campo 2A: Tipo de equipo - Aluminio y PVC
+
+Tipo de campo: lista desplegable.
+
+Opciones:
+
+- Cortadora Mono Cabezal Aluminio/PVC
+- Cortadora Doble Cabezal Aluminio/PVC
+- Centro de Mecanizado 3 ejes Aluminio/PVC
+- Centro de Mecanizado 4 ejes Aluminio/PVC
+- Centro de Mecanizado 5 ejes Aluminio/PVC
+- Retestadora
+- Fresadora
+- Pantógrafo
+
+Campo obligatorio: sí, pero solo cuando la categoría seleccionada sea **Aluminio y PVC**.
+
+### Campo 2B: Tipo de equipo - Madera y Tableros
+
+Tipo de campo: lista desplegable.
+
+Opciones:
+
+- Seccionadora Horizontal
+- Seccionadora Vertical
+- Enchapadora de Cantos
+- Centro de Mecanizado Nesting
+- Centro de Mecanizado Barra y Corte
+- CNC de 2 cabezales
+- Centro de Perforación
+- Centro de Corte
+- Lijadora
+
+Campo obligatorio: sí, pero solo cuando la categoría seleccionada sea **Madera y Tableros**.
+
+## Reglas condicionales en Jotform
+
+En Jotform, ir a:
+
+`Configuración → Condiciones → Mostrar/Ocultar campo`
+
+Configurar estas reglas:
+
+### Regla 1
+
+Si:
+
+`Categoría de maquinaria` es igual a `Aluminio y PVC`
+
+Entonces:
+
+- Mostrar `Tipo de equipo - Aluminio y PVC`
+- Ocultar `Tipo de equipo - Madera y Tableros`
+
+### Regla 2
+
+Si:
+
+`Categoría de maquinaria` es igual a `Madera y Tableros`
+
+Entonces:
+
+- Mostrar `Tipo de equipo - Madera y Tableros`
+- Ocultar `Tipo de equipo - Aluminio y PVC`
+
+### Regla 3
+
+Si:
+
+`Categoría de maquinaria` está vacía
+
+Entonces:
+
+- Ocultar `Tipo de equipo - Aluminio y PVC`
+- Ocultar `Tipo de equipo - Madera y Tableros`
+
+## Nombre de campos recomendado para Google Sheets
+
+Para evitar confusión en la planilla, se recomienda usar estos nombres técnicos:
+
+- `categoria_maquinaria`
+- `tipo_equipo_aluminio_pvc`
+- `tipo_equipo_madera_tableros`
+
+En reportes o dashboards posteriores se puede crear una columna calculada llamada `tipo_equipo_final`, que tome el valor del campo de Aluminio/PVC o Madera/Tableros según corresponda.
+
 ## Notificación interna
 
 Destinatario:
