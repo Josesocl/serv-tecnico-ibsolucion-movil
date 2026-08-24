@@ -20,12 +20,39 @@
 
 | Campo | Tipo | Obligatorio | Observación |
 |---|---|---:|---|
-| Tipo de equipo | Lista desplegable | Sí | Máquina, herramienta, sistema o instalación |
+| Tipo de equipo | Lista desplegable agrupada | Sí | Categorías de maquinaria industrial, no equipos TI |
 | Marca | Texto | No | Marca equipo |
 | Modelo | Texto | No | Modelo equipo |
 | Número de serie | Texto | No | Serie si existe |
 | Ubicación del equipo | Texto | No | Área, línea, nave, sector |
 | Condición inicial | Texto largo | Sí | Estado observado al inicio |
+
+### Opciones correctas para Tipo de equipo
+
+El campo **Tipo de equipo** debe configurarse como una lista desplegable de maquinaria. No usar categorías genéricas de soporte TI como Celular, Tablet o Laptop.
+
+#### Aluminio y PVC
+
+- Cortadora Mono Cabezal Aluminio/PVC
+- Cortadora Doble Cabezal Aluminio/PVC
+- Centro de Mecanizado 3 ejes Aluminio/PVC
+- Centro de Mecanizado 4 ejes Aluminio/PVC
+- Centro de Mecanizado 5 ejes Aluminio/PVC
+- Retestadora
+- Fresadora
+- Pantógrafo
+
+#### Madera y Tableros
+
+- Seccionadora Horizontal
+- Seccionadora Vertical
+- Enchapadora de Cantos
+- Centro de Mecanizado Nesting
+- Centro de Mecanizado Barra y Corte
+- CNC de 2 cabezales
+- Centro de Perforación
+- Centro de Corte
+- Lijadora
 
 ## 3. Tipo de servicio
 
