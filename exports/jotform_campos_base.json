@@ -77,6 +77,29 @@
     }
   ],
   "dropdowns": {
+    "tipo_equipo": {
+      "Aluminio y PVC": [
+        "Cortadora Mono Cabezal Aluminio/PVC",
+        "Cortadora Doble Cabezal Aluminio/PVC",
+        "Centro de Mecanizado 3 ejes Aluminio/PVC",
+        "Centro de Mecanizado 4 ejes Aluminio/PVC",
+        "Centro de Mecanizado 5 ejes Aluminio/PVC",
+        "Retestadora",
+        "Fresadora",
+        "Pantógrafo"
+      ],
+      "Madera y Tableros": [
+        "Seccionadora Horizontal",
+        "Seccionadora Vertical",
+        "Enchapadora de Cantos",
+        "Centro de Mecanizado Nesting",
+        "Centro de Mecanizado Barra y Corte",
+        "CNC de 2 cabezales",
+        "Centro de Perforación",
+        "Centro de Corte",
+        "Lijadora"
+      ]
+    },
     "tipo_servicio": [
       "Preventivo",
       "Correctivo",
