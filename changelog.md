@@ -17,6 +17,12 @@
 - Encabezados CSV para Google Sheets.
 - Estructura JSON base de campos para Jotform.
 
+### Modificado
+
+- Se reemplazó la lógica genérica de **Tipo de equipo** por tres campos para Jotform: `Categoría de maquinaria`, `Tipo de equipo - Aluminio y PVC` y `Tipo de equipo - Madera y Tableros`.
+- Se actualizó la lista de **Tipo de equipo - Aluminio y PVC** con las opciones corregidas: Cortadora Mono Cabezal, Cortadora Doble Cabezal, CNC 3 ejes, CNC 4 ejes, CNC 5 ejes, Soldadora Mono cabezal, Soldadora 2 cabezales, Soldadora 4 cabezales, Retestadora fresas, Pantógrafo y Sierra portátil.
+- Se dejó instrucción explícita para borrar o descartar el campo genérico anterior de Jotform y crear de nuevo los campos de maquinaria.
+
 ### Pendiente
 
 - Subir logo IBSolucion a `assets/`.
