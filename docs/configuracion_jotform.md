@@ -43,16 +43,22 @@
 
 El campo **Tipo de equipo** no debe usar categorías genéricas de soporte TI como Celular, Tablet o Laptop.
 
-Debe configurarse con lógica industrial, separando primero la familia de maquinaria y luego el tipo específico de equipo.
+Si el formulario fue creado desde una plantilla anterior, borrar o descartar el campo anterior **Tipo de equipo** y crear nuevamente la estructura de maquinaria con tres campos:
+
+1. **Categoría de maquinaria**.
+2. **Tipo de equipo - Aluminio y PVC**.
+3. **Tipo de equipo - Madera y Tableros**.
 
 ### Campo 1: Categoría de maquinaria
 
 Tipo de campo: lista desplegable.
 
-Opciones:
+Opciones para pegar en Jotform:
 
-- Aluminio y PVC
-- Madera y Tableros
+```text
+Aluminio y PVC
+Madera y Tableros
+```
 
 Campo obligatorio: sí.
 
@@ -60,16 +66,21 @@ Campo obligatorio: sí.
 
 Tipo de campo: lista desplegable.
 
-Opciones:
+Opciones para pegar en Jotform:
 
-- Cortadora Mono Cabezal Aluminio/PVC
-- Cortadora Doble Cabezal Aluminio/PVC
-- Centro de Mecanizado 3 ejes Aluminio/PVC
-- Centro de Mecanizado 4 ejes Aluminio/PVC
-- Centro de Mecanizado 5 ejes Aluminio/PVC
-- Retestadora
-- Fresadora
-- Pantógrafo
+```text
+Cortadora Mono Cabezal
+Cortadora Doble Cabezal
+CNC 3 ejes
+CNC 4 ejes
+CNC 5 ejes
+Soldadora Mono cabezal
+Soldadora 2 cabezales
+Soldadora 4 cabezales
+Retestadora fresas
+Pantógrafo
+Sierra portátil
+```
 
 Campo obligatorio: sí, pero solo cuando la categoría seleccionada sea **Aluminio y PVC**.
 
@@ -77,17 +88,19 @@ Campo obligatorio: sí, pero solo cuando la categoría seleccionada sea **Alumin
 
 Tipo de campo: lista desplegable.
 
-Opciones:
+Opciones para pegar en Jotform:
 
-- Seccionadora Horizontal
-- Seccionadora Vertical
-- Enchapadora de Cantos
-- Centro de Mecanizado Nesting
-- Centro de Mecanizado Barra y Corte
-- CNC de 2 cabezales
-- Centro de Perforación
-- Centro de Corte
-- Lijadora
+```text
+Seccionadora Horizontal
+Seccionadora Vertical
+Enchapadora de Cantos
+Centro de Mecanizado Nesting
+Centro de Mecanizado Barra y Corte
+CNC de 2 cabezales
+Centro de Perforación
+Centro de Corte
+Lijadora
+```
 
 Campo obligatorio: sí, pero solo cuando la categoría seleccionada sea **Madera y Tableros**.
 
