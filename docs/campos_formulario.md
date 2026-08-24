@@ -20,29 +20,45 @@
 
 | Campo | Tipo | Obligatorio | Observación |
 |---|---|---:|---|
-| Tipo de equipo | Lista desplegable agrupada | Sí | Categorías de maquinaria industrial, no equipos TI |
+| Categoría de maquinaria | Lista desplegable | Sí | Aluminio y PVC / Madera y Tableros |
+| Tipo de equipo - Aluminio y PVC | Lista desplegable condicional | Sí, si aplica | Mostrar solo si categoría = Aluminio y PVC |
+| Tipo de equipo - Madera y Tableros | Lista desplegable condicional | Sí, si aplica | Mostrar solo si categoría = Madera y Tableros |
 | Marca | Texto | No | Marca equipo |
 | Modelo | Texto | No | Modelo equipo |
 | Número de serie | Texto | No | Serie si existe |
 | Ubicación del equipo | Texto | No | Área, línea, nave, sector |
 | Condición inicial | Texto largo | Sí | Estado observado al inicio |
 
-### Opciones correctas para Tipo de equipo
+### Instrucción para Jotform
 
-El campo **Tipo de equipo** debe configurarse como una lista desplegable de maquinaria. No usar categorías genéricas de soporte TI como Celular, Tablet o Laptop.
+Borrar o descartar el campo genérico anterior **Tipo de equipo** si fue creado desde una plantilla. No usar categorías de soporte TI como Celular, Tablet o Laptop.
 
-#### Aluminio y PVC
+Crear de nuevo estos campos:
 
-- Cortadora Mono Cabezal Aluminio/PVC
-- Cortadora Doble Cabezal Aluminio/PVC
-- Centro de Mecanizado 3 ejes Aluminio/PVC
-- Centro de Mecanizado 4 ejes Aluminio/PVC
-- Centro de Mecanizado 5 ejes Aluminio/PVC
-- Retestadora
-- Fresadora
+1. **Categoría de maquinaria**.
+2. **Tipo de equipo - Aluminio y PVC**.
+3. **Tipo de equipo - Madera y Tableros**.
+
+### Opciones para Categoría de maquinaria
+
+- Aluminio y PVC
+- Madera y Tableros
+
+### Opciones para Tipo de equipo - Aluminio y PVC
+
+- Cortadora Mono Cabezal
+- Cortadora Doble Cabezal
+- CNC 3 ejes
+- CNC 4 ejes
+- CNC 5 ejes
+- Soldadora Mono cabezal
+- Soldadora 2 cabezales
+- Soldadora 4 cabezales
+- Retestadora fresas
 - Pantógrafo
+- Sierra portátil
 
-#### Madera y Tableros
+### Opciones para Tipo de equipo - Madera y Tableros
 
 - Seccionadora Horizontal
 - Seccionadora Vertical
