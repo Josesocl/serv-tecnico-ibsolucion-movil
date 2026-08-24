@@ -21,7 +21,9 @@
     {
       "name": "Equipo intervenido",
       "fields": [
-        "tipo_equipo",
+        "categoria_maquinaria",
+        "tipo_equipo_aluminio_pvc",
+        "tipo_equipo_madera_tableros",
         "marca",
         "modelo",
         "numero_serie",
@@ -77,29 +79,31 @@
     }
   ],
   "dropdowns": {
-    "tipo_equipo": {
-      "Aluminio y PVC": [
-        "Cortadora Mono Cabezal Aluminio/PVC",
-        "Cortadora Doble Cabezal Aluminio/PVC",
-        "Centro de Mecanizado 3 ejes Aluminio/PVC",
-        "Centro de Mecanizado 4 ejes Aluminio/PVC",
-        "Centro de Mecanizado 5 ejes Aluminio/PVC",
-        "Retestadora",
-        "Fresadora",
-        "Pantógrafo"
-      ],
-      "Madera y Tableros": [
-        "Seccionadora Horizontal",
-        "Seccionadora Vertical",
-        "Enchapadora de Cantos",
-        "Centro de Mecanizado Nesting",
-        "Centro de Mecanizado Barra y Corte",
-        "CNC de 2 cabezales",
-        "Centro de Perforación",
-        "Centro de Corte",
-        "Lijadora"
-      ]
-    },
+    "categoria_maquinaria": [
+      "Aluminio y PVC",
+      "Madera y Tableros"
+    ],
+    "tipo_equipo_aluminio_pvc": [
+      "Cortadora Mono Cabezal Aluminio/PVC",
+      "Cortadora Doble Cabezal Aluminio/PVC",
+      "Centro de Mecanizado 3 ejes Aluminio/PVC",
+      "Centro de Mecanizado 4 ejes Aluminio/PVC",
+      "Centro de Mecanizado 5 ejes Aluminio/PVC",
+      "Retestadora",
+      "Fresadora",
+      "Pantógrafo"
+    ],
+    "tipo_equipo_madera_tableros": [
+      "Seccionadora Horizontal",
+      "Seccionadora Vertical",
+      "Enchapadora de Cantos",
+      "Centro de Mecanizado Nesting",
+      "Centro de Mecanizado Barra y Corte",
+      "CNC de 2 cabezales",
+      "Centro de Perforación",
+      "Centro de Corte",
+      "Lijadora"
+    ],
     "tipo_servicio": [
       "Preventivo",
       "Correctivo",
@@ -126,5 +130,44 @@
       "No recibido conforme",
       "Cliente no disponible para firma"
     ]
-  }
+  },
+  "conditions": [
+    {
+      "name": "mostrar_tipo_equipo_aluminio_pvc",
+      "if": {
+        "field": "categoria_maquinaria",
+        "operator": "equals",
+        "value": "Aluminio y PVC"
+      },
+      "then": {
+        "show": ["tipo_equipo_aluminio_pvc"],
+        "hide": ["tipo_equipo_madera_tableros"]
+      }
+    },
+    {
+      "name": "mostrar_tipo_equipo_madera_tableros",
+      "if": {
+        "field": "categoria_maquinaria",
+        "operator": "equals",
+        "value": "Madera y Tableros"
+      },
+      "then": {
+        "show": ["tipo_equipo_madera_tableros"],
+        "hide": ["tipo_equipo_aluminio_pvc"]
+      }
+    },
+    {
+      "name": "ocultar_tipos_equipo_sin_categoria",
+      "if": {
+        "field": "categoria_maquinaria",
+        "operator": "is_empty"
+      },
+      "then": {
+        "hide": [
+          "tipo_equipo_aluminio_pvc",
+          "tipo_equipo_madera_tableros"
+        ]
+      }
+    }
+  ]
 }
