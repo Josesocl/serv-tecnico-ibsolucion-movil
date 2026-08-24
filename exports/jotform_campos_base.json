@@ -1,0 +1,107 @@
+{
+  "form_name": "Serv Técnico IBSolucion Móvil",
+  "notification_email": "jrjottar@ibsolucion.com",
+  "sections": [
+    {
+      "name": "Identificación del servicio",
+      "fields": [
+        "folio_servicio",
+        "fecha",
+        "hora_inicio",
+        "hora_termino",
+        "cliente",
+        "obra_planta_ubicacion",
+        "direccion",
+        "contacto_cliente",
+        "telefono_contacto",
+        "email_contacto",
+        "tecnico_responsable"
+      ]
+    },
+    {
+      "name": "Equipo intervenido",
+      "fields": [
+        "tipo_equipo",
+        "marca",
+        "modelo",
+        "numero_serie",
+        "ubicacion_equipo",
+        "condicion_inicial"
+      ]
+    },
+    {
+      "name": "Diagnóstico",
+      "fields": [
+        "tipo_servicio",
+        "falla_reportada",
+        "diagnostico_tecnico",
+        "riesgos_detectados",
+        "fotos_antes"
+      ]
+    },
+    {
+      "name": "Trabajo realizado",
+      "fields": [
+        "actividades_realizadas",
+        "repuestos_utilizados",
+        "lubricacion_aplicada",
+        "ajustes_realizados",
+        "pruebas_realizadas",
+        "fotos_durante",
+        "fotos_despues"
+      ]
+    },
+    {
+      "name": "Estado final y recomendaciones",
+      "fields": [
+        "estado_final",
+        "requiere_nueva_visita",
+        "requiere_repuestos",
+        "requiere_cotizacion_adicional",
+        "recomendaciones_cliente",
+        "observaciones_tecnico"
+      ]
+    },
+    {
+      "name": "Recepción conforme",
+      "fields": [
+        "recepcion_conforme",
+        "nombre_receptor",
+        "cargo_receptor",
+        "rut_receptor",
+        "email_receptor",
+        "comentarios_cliente",
+        "firma_cliente",
+        "firma_tecnico"
+      ]
+    }
+  ],
+  "dropdowns": {
+    "tipo_servicio": [
+      "Preventivo",
+      "Correctivo",
+      "Instalación",
+      "Puesta en marcha",
+      "Inspección técnica",
+      "Garantía",
+      "Capacitación",
+      "Emergencia",
+      "Otro"
+    ],
+    "estado_final": [
+      "Operativo",
+      "Operativo con observaciones",
+      "No operativo",
+      "Pendiente de repuesto",
+      "Pendiente de cotización",
+      "Pendiente de nueva visita",
+      "Servicio rechazado por cliente"
+    ],
+    "recepcion_conforme": [
+      "Recibido conforme",
+      "Recibido con observaciones",
+      "No recibido conforme",
+      "Cliente no disponible para firma"
+    ]
+  }
+}
