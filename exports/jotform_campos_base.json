@@ -84,14 +84,17 @@
       "Madera y Tableros"
     ],
     "tipo_equipo_aluminio_pvc": [
-      "Cortadora Mono Cabezal Aluminio/PVC",
-      "Cortadora Doble Cabezal Aluminio/PVC",
-      "Centro de Mecanizado 3 ejes Aluminio/PVC",
-      "Centro de Mecanizado 4 ejes Aluminio/PVC",
-      "Centro de Mecanizado 5 ejes Aluminio/PVC",
-      "Retestadora",
-      "Fresadora",
-      "Pantógrafo"
+      "Cortadora Mono Cabezal",
+      "Cortadora Doble Cabezal",
+      "CNC 3 ejes",
+      "CNC 4 ejes",
+      "CNC 5 ejes",
+      "Soldadora Mono cabezal",
+      "Soldadora 2 cabezales",
+      "Soldadora 4 cabezales",
+      "Retestadora fresas",
+      "Pantógrafo",
+      "Sierra portátil"
     ],
     "tipo_equipo_madera_tableros": [
       "Seccionadora Horizontal",
